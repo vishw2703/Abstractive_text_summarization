@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topic</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            background-color: #0b0c3c;
+        }
+        marquee{
+            font-size: 200%;
+            background-color: #0b0c3c;
+            color: white;
+        }
+        
+        .before{
+            margin-top: 5%;
+            margin-left: 20%;
+        }
+        textarea{
+            font-size: 200%;
+        }
+    </style>
+</head>
+<body>
+    <marquee width="100%" direction="left" bgcolor="white" style="bottom: 0;">
+        <div class="link-div">{{ A[1] }} || {{ A[2] }} || {{ A[3] }} || {{ A[4] }} || {{ A[5] }} || {{ A[6] }} || {{ A[7] }} || {{ A[8] }} || {{ A[9] }} || {{ A[0] }} <br></div>
+        
+        </marquee>
+ <div class="before">
+    <form action="/sumarizing" method="POST">
+        <textarea name= "text_user" placeholder="Enter The Article of Which You Want The Summary" rows="25" cols="75"></textarea>
+        <input type="submit" value="Submit" style="font-size:150%;">
+   </form>
+</div>
+
+</body>
+</html>

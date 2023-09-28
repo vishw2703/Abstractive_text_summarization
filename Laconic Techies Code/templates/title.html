@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    <style>
+        body{
+    background-color: #0b0c3c;
+    margin-top: 0%;
+    margin-right: 0;
+    margin-left: 0;
+}
+marquee{
+  font-size: 200%;
+  background-color: #0b0c3c;
+  color: white;
+}
+p{
+  font-family:"serif";
+  color: white;
+  margin-top: 0%;
+  margin-left: 41%;
+  font-size: 200%;
+}
+.heading{
+    width: 50%;
+    height: 50%;
+    margin-left: 22%;
+    background-color: rgba(236,233,226,255);
+    font-size: 30%;
+}
+.container {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100vw;
+height: 100vh;
+margin-top: -3%;
+  }
+  .body {
+    width: clamp(90vw,60%,700px);
+    border-radius: 10px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+  .body a{
+   width: 100%;
+   margin: 100px;
+   text-decoration: none;
+   cursor: pointer;
+   margin-top: 0%;
+   color:#0b0c3c;
+  }
+  .link {
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 7px;
+    width: 100%;
+    background-color: white;
+    font-size: 30px;
+    margin:7px auto;
+    text-align: center;
+    
+  }
+  .link a{
+    color:#0b0c3c;
+    padding: 14px 20;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 1%;
+  }
+  .link a:hover {
+    background-color: rgb(82, 80, 80);
+    color: rgb(240, 231, 231);
+    padding: 5px;
+    width: 10%;
+    height: 40%;
+  }
+    </style>
+</head>
+<body>
+  <marquee width="100%" direction="left" bgcolor="white" style="bottom: 0;">
+    <div class="link-div">{{ A[1] }} || {{ A[2] }} || {{ A[3] }} || {{ A[4] }} || {{ A[5] }} || {{ A[6] }} || {{ A[7] }} || {{ A[8] }} || {{ A[9] }} || {{ A[0] }} <br></div>
+    
+    </marquee>
+<p>Topic's Heading</p>
+  <script>
+    var input_by_user=sessionStorage.getItem("input_by_user");
+    console.log(input_by_user);
+  </script>
+    <div class="container">
+        <div class="body">
+                <div class="link"> 
+                  <form action="/first", method="POST">
+                    <input type="hidden" name='input_by_user'>
+                    <a href="{{ url_for('first')}}">
+                       {{ title_web1 }} </a>
+                  </form>
+                </div>             
+                
+                <div class="link"> 
+                  <form action="/second", method="POST">
+                    <input type="hidden" name='input_by_user'>
+                    <a href="{{ url_for('second')}}">
+                    {{ title_web2 }} </a>
+                  </form>
+                </div>
+                
+                <div class="link"> 
+                  <form action="/third", method="POST">
+                    <input type="hidden" name='input_by_user'>
+                    <a href="{{ url_for('third')}}">
+                    {{ title_web3 }} </a>
+                  </form>
+                </div>
+
+                <div class="link"> 
+                  <form action="/fourth", method="POST">
+                    <input type="hidden" name='input_by_user'>
+                    <a href="{{ url_for('fourth')}}">
+                    {{ title_web4 }} </a>
+                  </form>
+                </div>
+                <div class="link"> 
+                  <form action="/fifth", method="POST">
+                    <input type="hidden" name='input_by_user'>
+                    <a href="{{ url_for('fifth')}}">
+                    {{ title_web5 }} </a>
+                  </form>
+                </div>
+                <div class="link"> 
+                  <form action="/sixth", method="POST">
+                    <input type="hidden" name='input_by_user'>
+                    <a href="{{ url_for('sixth')}}">
+                    {{ title_web6 }} </a>
+                  </form>
+                </div>
+                <div class="link"> 
+                  <form action="/seventh", method="POST">
+                    <input type="hidden" name='input_by_user'>
+                    <a href="{{ url_for('seventh')}}">
+                    {{ title_web7 }} </a>
+                  </form>
+                </div>
+                <div class="link"> 
+                  <form action="/eighth", method="POST">
+                    <input type="hidden" name='input_by_user'>
+                    <a href="{{ url_for('eighth')}}">
+                    {{ title_web8 }} </a>
+                  </form>
+                </div>
+                <div class="link"> 
+                  <form action="/ninth", method="POST">
+                    <input type="hidden" name='input_by_user'>
+                    <a href="{{ url_for('ninth')}}">
+                    {{ title_web9 }} </a>
+                  </form>
+                </div>
+                <div class="link"> 
+                  <form action="/tenth", method="POST">
+                    <input type="hidden" name='input_by_user'>
+                    <a href="{{ url_for('tenth')}}">
+                    {{ title_web10 }} </a>
+                  </form>
+                </div>
+        </div>
+         
+    </div>
+</body>
+</html>

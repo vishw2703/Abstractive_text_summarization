@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            background-color: #0b0c3c;
+        }
+        marquee{
+            font-size: 200%;
+            background-color: #0b0c3c;
+            color: white;
+        }
+        .file{
+            color: white;
+            margin-left: 29%;
+            margin-top: 15%;
+            font-size: 200%;
+        }
+    </style>
+</head>
+<body>
+    <marquee width="100%" direction="left" bgcolor="white" style="bottom: 0;">
+        <div class="link-div">{{ A[1] }} || {{ A[2] }} || {{ A[3] }} || {{ A[4] }} || {{ A[5] }} || {{ A[6] }} || {{ A[7] }} || {{ A[8] }} || {{ A[9] }} || {{ A[0] }} <br></div>
+        
+        </marquee>
+    <div class="file">
+    <h1>Upload Your File Here</h1>
+    
+        
+        <form method='POST' enctype='multipart/form-data'>
+        
+                {{form.hidden_tag()}}
+                {{form.file()}}
+                {{form.submit()}}   
+                
+        </form>
+
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ningth</title>
+    <style>
+      body{
+    background-color: var( --baseColor);
+    margin: 0%;
+    padding: 0%;
+}
+marquee{
+  font-size: 200%;
+  background-color: #0b0c3c;
+  color: white;
+}
+
+:root{
+  --baseColor:#0b0c3c;
+}
+.flex-container{
+    flex-direction: column;
+    display: flex;
+}
+@media screen and (max-width: 600px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+  h5{
+    color: white;
+    font-size: clamp(18px,3vw,30px);
+    font-size: 150%;
+  }
+  h1{
+    color:white;
+    font-size: 400%;
+}
+.summary{
+  
+    background-color: var( --baseColor);
+    width: 100%;
+    line-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0;
+} 
+.summary-text{
+  background-color: rgb(236, 244, 245);
+  width: clamp(20ch,50%,45ch);
+  min-width: 60vw;
+  min-height:fit-content ;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 180%;
+  line-height: 2rem;
+}
+.link{
+  background-color: #0b0c3c;
+  width: clamp(25,50ch);
+  /* width: 60%; */
+  margin-top: 30%;
+  margin: 50px 0;
+  margin-left: 26%;
+  padding-left:10% ;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+}
+  a:link {
+  position: absolute;
+  display: block;
+  background-color: transparent;
+  text-decoration: none;
+  }
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  position: absolute;
+  display: block;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+  position: absolute;
+  display: block;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+  position: absolute;
+  display: block;
+}
+    </style>
+</head>
+<body>
+  <marquee width="100%" direction="left" bgcolor="white" style="bottom: 0;">
+    <div class="link-div">{{ A[1] }} || {{ A[2] }} || {{ A[3] }} || {{ A[4] }} || {{ A[5] }} || {{ A[6] }} || {{ A[7] }} || {{ A[8] }} || {{ A[9] }} || {{ A[0] }} <br></div>
+    
+    </marquee>
+    <div class="flex-container">
+      <div class="title">
+        <h1 align="center">Summary</h1>
+      </div>
+        <div class="summary">
+             <div class="summary-text"> {{ article_summary_9 }}
+            </div>
+        </div>
+          <div class="link">
+          <p style="color:white;text-align: center;">To read full article:<a href="{{ url_for('weblink9')}}" style="position:absolute; top:27%; left:106%;color: white;">{{web_link9}}</a></p>
+        </div>
+    </div>
+</body>
+</html>

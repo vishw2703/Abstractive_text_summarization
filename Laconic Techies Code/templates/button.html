@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second</title>
+    <style>
+        body{
+    background-color: #0b0c3c;
+}
+marquee{
+  font-size: 200%;
+  background-color: #0b0c3c;
+  color: white;
+}
+.heading{
+    width: 50%;
+    height: 50%;
+    margin-left: 22%;
+    margin-top: 3%;
+    background-color: #0b0c3c;
+    font-size: 30%;
+
+}
+.container {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100vw;
+height: 100vh;
+  }
+  
+  .body {
+background-color: white;
+    width: clamp(90vw,60%,700px);
+    min-height:10%;
+    border-radius: 10px;
+  }
+  .body a{
+   width: 80%;
+   margin: 200px;
+   text-decoration: none;
+   cursor: pointer;
+   font-size: 200%;
+   color: #0b0c3c;
+   padding-left: 23%;
+  }
+  a:hover{
+    background-color: rgb(110, 110, 110);
+    color: #0b0c3c;
+  }
+    </style>
+</head>
+<body>
+  <marquee width="100%" direction="left" bgcolor="white" style="bottom: 0;">
+    <div class="link-div">{{ A[1] }} || {{ A[2] }} || {{ A[3] }} || {{ A[4] }} || {{ A[5] }} || {{ A[6] }} || {{ A[7] }} || {{ A[8] }} || {{ A[9] }} || {{ A[0] }} <br></div>
+    
+    </marquee>
+    <div class="container">
+                   <div class="body">
+                      <form action="/third", method="POST">
+                        <input type="hidden" name='input_by_user'>
+                        <a href="{{ url_for('summary')}}">Click Here To Get The Summary</a>
+                      </form>
+                   </div>             
+        </div>
+         
+    </div>
+</body>
+</html>

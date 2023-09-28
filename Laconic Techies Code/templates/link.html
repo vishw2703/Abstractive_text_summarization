@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title>Uni Sum</title>
+      <style>
+        body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #0b0c3c;
+} 
+marquee{
+    font-size: 200%;
+    background-color: #0b0c3c;
+    color: white;
+}
+p{
+    font-family:"serif";
+    color: white;
+    margin-top: 6%;
+    margin-left: 42%;
+    font-size: 500%;
+  }
+.search
+{
+    overflow: auto;
+	margin-left: 40%;
+    margin-top: 6%;
+    border-radius: 25px;
+    height:240%;
+    width: 50%;
+}
+
+.search input[type="text"]
+{
+	border: 0px;
+	width: 37%;
+	padding: 25px 25px;
+    border-radius: 35px;
+    
+}
+
+.search input[type="text"]:focus
+{
+	outline: 0;
+}
+
+.search input[type="submit"]
+{
+	border: 0px;
+	background: none;
+	background-color: white;
+	color: #0b0c3c;
+	padding: 25px;
+    cursor:pointer;
+    border-radius: 35px;
+    
+}
+@media only screen and (min-width : 150px) and (max-width : 780px)
+{
+	
+	.search
+	{
+		width: 95%;
+		margin: 0 auto;
+	} 
+}
+    </style>
+    </head>
+    <body>
+        <marquee width="100%" direction="left" bgcolor="white" style="bottom: 0;">
+            <div class="link-div">{{ A[1] }} || {{ A[2] }} || {{ A[3] }} || {{ A[4] }} || {{ A[5] }} || {{ A[6] }} || {{ A[7] }} || {{ A[8] }} || {{ A[9] }} || {{ A[0] }} <br></div>
+            
+            </marquee>
+            <script>
+                var input_by_user="input_by_user";
+                sessionStorage.setItem("input_by_user",input_by_user);
+            </script>
+        <p>Uni-Sum</p>
+        <div class="search">
+            <form action="/sumlink" method="POST">
+                 <input type="text" name= "link" placeholder="Enter the Topic">
+                 <input type="submit" value="Submit">
+            </form>
+        </div>
+     </body>
+</html>

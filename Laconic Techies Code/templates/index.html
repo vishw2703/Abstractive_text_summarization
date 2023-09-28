@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            background-color: #0b0c3c;
+        }
+        marquee{
+            font-size: 200%;
+            background-color: #0b0c3c;
+            color: white;
+        }
+        h2{
+            margin-left: 39%;
+            color: white;
+            font-size: 600%;
+            margin-top: 4%;
+        }
+        h1{
+            color: white;
+            margin-top: 7%;
+            margin-left: 14%;
+            font-size: 250%;
+            padding-top: 1%;
+        }
+        a{
+            font-size: 300%;
+            margin-left: 49%;
+            margin-top: 0%;
+            color: white;
+            
+        }
+        a:hover{
+            background-color: rgb(102, 100, 100);
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <marquee width="100%" direction="left" bgcolor="white" style="bottom: 0;">
+        <div class="link-div">{{ A1 }} || {{ A2 }} || {{ A3 }} || {{ A4 }} || {{ A5 }} || {{ A6 }} || {{ A7 }} || {{ A8 }} || {{ A9 }} || {{ A10 }} <br></div>
+        
+        </marquee>
+
+    <h2>Uni-Summ</h2>
+    <div class="option">
+    <h1>Select Any One Option From Below:</h1>
+    
+        <form action="/topic">
+            <input type= "hidden" name="By Given Topic" style="margin-right:2%;font-size:140%;">
+            <a href="{{ url_for('topic')}}">By Given Topic</a>
+        </form>
+        <form action="/text"><input type="hidden" name="Text Paragraph" style="margin-right:2%;font-size:140%;">
+            <a href="{{ url_for('text')}}">By Text Input</a>
+    
+        </form>
+        
+        <form action="/upload">
+            <input type= "hidden" name="From Document"style="margin-right:2%;font-size:140%;">
+            <a href="{{ url_for('upload')}}">By File Upload</a>
+        </form>
+
+        <form action="/link">
+            <input type= "hidden" name="From Link"style="margin-right:2%;font-size:140%;">
+            <a href="{{ url_for('link')}}">By giving link</a>
+        </form>
+    </div>
+    
+</body>
+</html>
